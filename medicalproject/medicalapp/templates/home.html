@@ -1,0 +1,60 @@
+
+{%extends 'index.html'%}
+{%load static%}
+
+
+
+
+
+
+
+
+{% block title %}
+{{setting.title}}
+{% endblock title %}
+
+
+{% block description %}
+{{setting.description}}
+{% endblock description %}
+
+
+{% block keyword %}
+{{setting.keyword}}
+{% endblock keyword %}
+
+
+{% block header %}
+{% include "header.html" %}
+{% endblock header %}
+<div>
+    {%if messages %} {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}" role="alert">
+        {{message}}
+    </div>
+    {% endfor %} {% endif %}
+</div>
+{% block sidebar %}
+
+{% endblock sidebar %}
+
+{% block slider %}
+{% include "slider.html" %}
+{%endblock%}
+<!-- Begin Body Wrapper -->
+<!-- Begin Slider With Banner Area -->
+{%block mainbody%}
+
+
+{% include "content.html" %}
+{% endblock %}
+<!-- Li's Trendding Products Area End Here -->
+<!-- Begin Footer Area -->
+{% block footer %}
+
+{% include "footer.html" %}
+
+{% endblock footer %}
+
+
+
